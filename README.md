@@ -1,7 +1,7 @@
 # Credit Risk AI – Production-Grade ML System  
 ![Python](https://img.shields.io/badge/python-3.11-blue)  
 ![FastAPI](https://img.shields.io/badge/FastAPI-Production-green)  
-![XGBoost](https://img.shields.io/badge/XGBoost-AUC%200.842-orange)  
+![XGBoost](https://img.shields.io/badge/XGBoost-AUC%200.739-orange)  
 ![SHAP](https://img.shields.io/badge/SHAP-Explainable_AI-red)  
 ![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-yellow)
 
@@ -13,7 +13,7 @@
 
 | Feature | Status |
 |---------|--------|
-| **XGBoost + Hyperparameter Tuning** | **AUC 0.842** with 79% recall on high-risk class |
+| **XGBoost + Hyperparameter Tuning** | **AUC 0.739** with Optuna optimization |
 | **SHAP Explainability** | Per-loan waterfall plots & global feature importance |
 | **FastAPI Inference** | Real-time `/predict` endpoint with JSON responses |
 | **Streamlit Dashboard** | Interactive UI + live SHAP visualizations |
@@ -35,6 +35,7 @@
 3. Sub Grade
 4. Installment  
 5. Total Acc
+
 ---
 
 ## Project Structure
@@ -61,6 +62,8 @@ credit-risk-ai/
 ├── requirements.txt # Python dependencies
 └── README.md
 
+text
+
 ---
 
 ## Installation & Setup
@@ -83,8 +86,7 @@ uvicorn api.main:app --reload --port 8000
 
 # Run the dashboard (in separate terminal)
 streamlit run dashboard/app.py
-
-## Usage
+Usage
 API Inference
 python
 import requests
@@ -114,10 +116,7 @@ json
     {"feature": "loan_amnt", "value": 10000, "impact": 0.018}
   ]
 }
-''' bash
-
-
-## Dashboard Features
+Dashboard Features
 Real-time Predictions: Input loan details and get instant risk assessment
 
 SHAP Visualizations: Interactive force plots and summary charts
@@ -126,11 +125,11 @@ Feature Analysis: Explore how different factors impact credit risk
 
 Model Metrics: Performance dashboard with AUC, precision, recall
 
-## Technical Details
+Technical Details
 Data Pipeline
 SQL Preprocessing: Filtered 150K+ LendingClub records using DuckDB
 
-##Feature Engineering:
+Feature Engineering:
 
 dti_ratio: Debt-to-income normalized scaling
 
@@ -156,10 +155,10 @@ Dashboard: Streamlit for interactive model exploration
 
 Modular Design: src/ package for reusable components
 
-📊 Results & Visualizations
+Results & Visualizations
 Model Performance
 https://images/auc_curve.png
-ROC curve showing AUC of 0.842
+ROC curve showing AUC of 0.739
 
 SHAP Explanations
 https://images/shap_summary.png
@@ -169,10 +168,10 @@ Individual Predictions
 https://images/force_plot.png
 Waterfall chart showing factors driving a specific loan decision
 
-🎯 Business Impact
+Business Impact
 This system demonstrates how machine learning can:
 
-Reduce default rates by identifying high-risk loans with 79% recall
+Reduce default rates by identifying high-risk loans
 
 Improve transparency through SHAP explanations for regulatory compliance
 
@@ -180,7 +179,7 @@ Accelerate decision-making with real-time API predictions
 
 Enable risk exploration via interactive dashboards for loan officers
 
-🤝 Contributing
+Contributing
 Fork the repository
 
 Create a feature branch (git checkout -b feature/amazing-feature)
@@ -191,15 +190,24 @@ Push to the branch (git push origin feature/amazing-feature)
 
 Open a Pull Request
 
-📄 License
+License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-📞 Contact
+Contact
 Renzo Ugarte Basurco
 
-Email: renzo.ugarte@mail.
+Email: renzo.ugarte@mail.utoronto.ca
 
+LinkedIn: linkedin.com/in/renzo-ugarte-basurco
 
+GitHub: github.com/Renzou756
+
+Acknowledgments
+LendingClub for providing the loan dataset
+
+SHAP community for excellent model interpretability tools
+
+FastAPI and Streamlit teams for fantastic deployment frameworks
 
 
 

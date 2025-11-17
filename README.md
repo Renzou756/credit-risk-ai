@@ -7,8 +7,6 @@
 
 **A bank-grade credit risk model** that predicts loan default probability using **XGBoost**, **Optuna**, and **SHAP**, deployed via **FastAPI** and **Streamlit**. Built with 150K+ LendingClub records to demonstrate production-ready ML pipelines for financial risk assessment.
 
----
-
 ## Features
 
 | Feature | Status |
@@ -19,8 +17,6 @@
 | **Streamlit Dashboard** | Interactive UI + live SHAP visualizations |
 | **Advanced Feature Engineering** | DTI ratios, credit utilization trends, payment-to-income |
 | **SMOTE Handling** | Balanced imbalanced dataset for optimal performance |
-
----
 
 ## Model Performance
 
@@ -36,35 +32,31 @@
 4. Installment  
 5. Total Acc
 
----
-
 ## Project Structure
 credit-risk-ai/
-├── notebooks/ # Jupyter notebooks for exploration
-│ ├── 01_eda.ipynb # Data exploration and analysis
-│ ├── 02_preprocess.ipynb # Feature engineering and cleaning
-│ └── 03_model.ipynb # Model training and evaluation
-├── src/ # Production code package
-│ ├── preprocess.py # Encoding + target encoding
-│ ├── model.py # Predict + SHAP explanations
-│ └── utils.py # Helper functions and utilities
+├── notebooks/
+│ ├── 01_eda.ipynb
+│ ├── 02_preprocess.ipynb
+│ └── 03_model.ipynb
+├── src/
+│ ├── preprocess.py
+│ ├── model.py
+│ └── utils.py
 ├── api/
-│ └── main.py # FastAPI server with /predict endpoint
+│ └── main.py
 ├── dashboard/
-│ └── app.py # Streamlit interactive dashboard
+│ └── app.py
 ├── data/
-│ ├── processed.parquet # 28 engineered features
+│ ├── processed.parquet
 │ ├── train_encoded.parquet
 │ └── test_encoded.parquet
 ├── models/
-│ ├── xgb_model.pkl # Trained XGBoost model
-│ └── shap_explainer.pkl # SHAP explainer object
-├── requirements.txt # Python dependencies
+│ ├── xgb_model.pkl
+│ └── shap_explainer.pkl
+├── requirements.txt
 └── README.md
 
 text
-
----
 
 ## Installation & Setup
 
@@ -73,6 +65,7 @@ text
 - pip or conda
 
 ### Quick Start
+
 ```bash
 # Clone repository
 git clone https://github.com/Renzou756/Credit-Risk-Prediction.git
@@ -98,8 +91,7 @@ payload = {
     "term": "36 months",
     "int_rate": 12.5,
     "dti": 18.5,
-    "revol_util": 45.2,
-    # ... other features
+    "revol_util": 45.2
 }
 
 response = requests.post("http://localhost:8000/predict", json=payload)
@@ -192,22 +184,6 @@ Open a Pull Request
 
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-Contact
-Renzo Ugarte Basurco
-
-Email: renzo.ugarte@mail.utoronto.ca
-
-LinkedIn: linkedin.com/in/renzo-ugarte-basurco
-
-GitHub: github.com/Renzou756
-
-Acknowledgments
-LendingClub for providing the loan dataset
-
-SHAP community for excellent model interpretability tools
-
-FastAPI and Streamlit teams for fantastic deployment frameworks
 
 
 

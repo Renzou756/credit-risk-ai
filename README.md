@@ -11,7 +11,7 @@
 
 | Feature | Status |
 |---------|--------|
-| **XGBoost + Hyperparameter Tuning** | **AUC 0.739** with Optuna optimization |
+| **XGBoost + Hyperparameter Tuning** | **AUC 0.741** with Optuna optimization |
 | **SHAP Explainability** | Per-loan feature importance for output explainability |
 | **FastAPI Inference** | Real-time `/predict` endpoint with JSON responses |
 | **Streamlit Dashboard** | Interactive UI + live SHAP visualizations |
@@ -20,7 +20,7 @@
 ## Model Performance
 
 **Key Metrics:**
-- **AUC Score**: 0.739
+- **AUC Score**: 0.7411
 - **Dataset**: 150K+ LendingClub records (2017-2018)
 - **Features**: 28 engineered financial indicators
 
@@ -81,7 +81,7 @@ text
 ## Results & Visualizations
 
 ### Model Performance
-![AUC Curve](images/auc_curve.png)
+![AUC Curve](auc_roc_curve.png)
 *ROC curve showing AUC of 0.739*
 
 ### SHAP Explanations
@@ -89,7 +89,8 @@ text
 *Global feature importance from SHAP values*
 
 ### Individual Predictions
-![Force Plot](images/force_plot.png)
+![Force Plot](force_plot_first_instance.png)
+![Waterfall](waterfall_correct_1.png)
 *Waterfall chart showing factors driving a specific loan decision*
 
 ## Business Impact
@@ -108,17 +109,6 @@ This system demonstrates how machine learning can:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-**Renzo Ugarte Basurco**  
-- Email: renzo.ugarte@mail.utoronto.ca  
-- LinkedIn: [linkedin.com/in/renzo-ugarte-basurco](https://linkedin.com/in/renzo-ugarte-basurco)  
-- GitHub: [github.com/Renzou756](https://github.com/Renzou756)
-
 ## Acknowledgments
 
 - **LendingClub** for providing the loan dataset
@@ -126,6 +116,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **FastAPI** and **Streamlit** teams for fantastic deployment frameworks
 
 *This project is for demonstration purposes and should not be used for actual financial decisions without proper validation and regulatory compliance.*
+
 
 
 

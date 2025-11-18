@@ -1,7 +1,7 @@
 # Credit Risk AI – Production-Grade ML System  
 ![Python](https://img.shields.io/badge/python-3.11-blue)  
 ![FastAPI](https://img.shields.io/badge/FastAPI-Production-green)  
-![XGBoost](https://img.shields.io/badge/XGBoost-AUC%200.739-orange)  
+![XGBoost](https://img.shields.io/badge/XGBoost-AUC%200.741-orange)  
 ![SHAP](https://img.shields.io/badge/SHAP-Explainable_AI-red)  
 ![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-yellow)
 
@@ -116,6 +116,7 @@ This system demonstrates how machine learning can:
 - **FastAPI** and **Streamlit** teams for fantastic deployment frameworks
 
 *This project is for demonstration purposes and should not be used for actual financial decisions without proper validation and regulatory compliance.*
+
 
 
 

@@ -96,18 +96,18 @@ credit-risk-ai/
 
 ### Deployment
 - **API**: FastAPI
-- **Dashboard**: Streamlit for interactive model exploration
+- **Dashboard**: Streamlit for interactive loan risk prediction
 - **Modular Design**: `src/` package for reusable components
 
 ## Results & Visualizations
 
 ### Model Performance
 ![AUC Curve](auc_roc_curve.png)
-*ROC curve showing AUC of 0.739*
+*ROC curve showing AUC of 0.741*
 
 ### SHAP Explanations
 ![SHAP Summary](shap_summary.png)
-*Global feature importance from SHAP values*
+*Feature importance from SHAP values*
 
 ### Individual Predictions
 ![Force Plot](force_plot_first_instance.png)
@@ -133,10 +133,11 @@ This system demonstrates how machine learning can:
 ## Acknowledgments
 
 - **LendingClub** for providing the loan dataset
-- **SHAP** community for excellent model interpretability tools
-- **FastAPI** and **Streamlit** teams for fantastic deployment frameworks
+- **SHAP** community for model interpretability tools
+- **FastAPI** and **Streamlit** teams for deployment frameworks
 
 *This project is for demonstration purposes and should not be used for actual financial decisions without proper validation and regulatory compliance.*
+
 
 
 
